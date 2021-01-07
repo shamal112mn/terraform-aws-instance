@@ -26,7 +26,7 @@ resource "aws_instance" "web" {
   instance_type = "t2.micro"
   ami           = data.aws_ami.my_ami.id
   
-  security_groups = [aws_security_group.web.id]
+  security_groups = ["${aws_security_group.sg_web.id}"]
 
    
 
@@ -37,7 +37,7 @@ resource "aws_instance" "web" {
 
  
 
-resource "aws_security_group" "web" {
+resource "aws_security_group" "sg_web" {
   name = "web"
   description = "Allow TLS inbound traffic"
 
