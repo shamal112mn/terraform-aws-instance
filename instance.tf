@@ -17,7 +17,7 @@ data "aws_ami" "my_ami" {
 		name = "virtualization-type"
 		values = ["hvm"]
 		}
-		 
+		 owners           = ["self"] 
 	}
 
 
