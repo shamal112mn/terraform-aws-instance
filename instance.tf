@@ -4,7 +4,7 @@ provider "aws" {
 
 resource "aws_key_pair" "mykeypub" {
 		key_name = "pub-key"
-		public_key = "${file("~/.shh/id_isa.pub")}"
+		public_key = "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQCZwRr7o/snUnsOljhWEMIVYKAD60QkDjPI1JPOMD/lBS3bttiw/7NxQt5GZHZVkzSw+k3G6s+EwK20EhkAHZ5p9znQVjpfchxjZBcU895MqiquB/Is+fgjUWUqFYtbIDFT05gLGmA+vcTSnI6tgYyundquDPoOp/7nKc4Yum2En6XUEhNmkiQBKTMwh0SecrblCpfcqsO63XCZURZ8j/sVJF7IdSuiSe0SpUeW955JDS7PmQcO4GrmFMHY196oOfGjXXdntjT2boXcf+GDPm9rShwvqHi5D+azLuUPaUbSzJU7KntydOW+pmNAaAoM1kB92m4RdfpD1qSY0C3CDdu3 root@docker"
 }
 
 data "aws_ami" "my_ami" {
