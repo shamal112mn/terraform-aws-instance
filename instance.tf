@@ -38,7 +38,7 @@ resource "aws_instance" "web" {
  
 
 resource "aws_security_group" "sg_web" {
-  name = "web"
+  name = "myweb"
   description = "Allow TLS inbound traffic"
 
     ingress {
